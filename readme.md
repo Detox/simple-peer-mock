@@ -3,12 +3,12 @@ This is a mock for `simple-peer` library, it provides API that Detox project use
 
 # How to install
 ```
-npm install --save-dev simple-peer-mock@github:Detox/simple-peer-mock
+npm install --save-dev github:Detox/simple-peer-mock
 ```
 # How to use
 ```javascript
-const simplePeerMock = require('simple-peer-mock').simplePeerMock; // This is a constructor
-require('simple-peer-mock').register() // This will replace `@detox/simple-peer` package globally
+const simplePeerMock = require('@detox/simple-peer-mock').simplePeerMock; // This is a constructor
+require('@detox/simple-peer-mock').register() // This will replace `@detox/simple-peer` package globally
 ```
 
 ## Contribution
