@@ -54,7 +54,7 @@ Object.defineProperty(simple-peer-mock::, 'constructor', {value: simple-peer-moc
 
 module.exports	=
 	simple-peer-mock	: simple-peer-mock
-	register			: register
+	register			: !->
 		# This is brutal, but running full WebRTC implementation for testing purposes is not feasible
 		module						= require('module')
 		original_require			= module.prototype.require

@@ -5,7 +5,7 @@
  * @license 0BSD
  */
 (function(){
-  var simplePeerInstances, asyncEventer, module, original_require;
+  var simplePeerInstances, asyncEventer;
   simplePeerInstances = [];
   asyncEventer = require('async-eventer');
   function simplePeerMock(options){
@@ -64,15 +64,17 @@
   });
   module.exports = {
     simplePeerMock: simplePeerMock,
-    register: register
-  };
-  module = require('module');
-  original_require = module.prototype.require;
-  module.prototype.require = function(module_name){
-    if (module_name === '@detox/simple-peer') {
-      return simplePeerMock;
-    } else {
-      return original_require.apply(this, arguments);
+    register: function(){
+      var module, original_require;
+      module = require('module');
+      original_require = module.prototype.require;
+      module.prototype.require = function(module_name){
+        if (module_name === '@detox/simple-peer') {
+          return simplePeerMock;
+        } else {
+          return original_require.apply(this, arguments);
+        }
+      };
     }
   };
 }).call(this);

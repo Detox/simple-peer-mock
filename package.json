@@ -1,0 +1,20 @@
+{
+	"name"         : "@detox/simple-peer-mock",
+	"description"  : "Mock for simple-peer instances used in tests",
+	"keywords"     : [],
+	"version"      : "",
+	"homepage"     : "https://github.com/Detox/simple-peer-mock",
+	"author"       : "Nazar Mokrynskyi <nazar@mokrynskyi.com>",
+	"repository"   : {
+		"type" : "git",
+		"url"  : "git://github.com/Detox/simple-peer-mock.git"
+	},
+	"license"      : "0BSD",
+	"main"         : "src/index.js",
+	"files"        : [
+		"src"
+	],
+	"dependencies" : {
+		"async-eventer" : "^1.1.7"
+	}
+}
